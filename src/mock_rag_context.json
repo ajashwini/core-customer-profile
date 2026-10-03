@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ccp.internal",
+  "generated_timestamp": "2026-10-03T13:00:00Z",
+  "token_optimization_metadata": {
+    "estimated_tokens": 142,
+    "context_window_efficiency": "High"
+  },
+  "compliance_guardrails": {
+    "legal_consent_status": false,
+    "applied_masking_protocols": ["PII_REDACTION_SHA256"]
+  },
+  "customer_profile_snapshot": {
+    "account_id": "usr_ccp_99812",
+    "customer_tier": "Enterprise_Premium",
+    "masked_pii_fields": {
+      "email_address": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "realtime_behavioral_context": {
+      "active_session_length_mins": 42,
+      "last_triggered_error_code": "ERR_LICENSE_EXPIRED_403",
+      "predicted_intent_classification": "BILLING_TROUBLESHOOTING"
+    }
+  }
+}
