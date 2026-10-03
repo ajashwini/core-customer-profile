@@ -1,0 +1,30 @@
+# Data Contract: CCP Enterprise Customer Profile Schema Specification
+version: 2.0.0
+description: "Standardized contract for enterprise systems publishing to core-customer-profile"
+dataset: user_identity_stream
+owner: "ccp-core-product-team"
+
+schema:
+  type: object
+  required:
+    - account_id
+    - event_timestamp
+    - customer_tier
+  properties:
+    account_id:
+      type: string
+      description: "Global system immutable identifier for the customer account."
+    event_timestamp:
+      type: int64
+      description: "Epoch timestamp in milliseconds tracking ingestion event execution."
+    customer_tier:
+      type: string
+      enum: [Free_Tier, Professional_Suite, Enterprise_Premium]
+    email_address:
+      type: string
+      meta:
+        classification: PII
+        masking_strategy: SHA256_HASH
+    legal_consent_status:
+      type: boolean
+      description: "Dynamic global flag driving compliance masking for downstream AI applications."
